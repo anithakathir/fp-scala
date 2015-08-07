@@ -23,7 +23,7 @@ object Recursion {
 
   def countChange(money: Int, coins: List[Int]): Int = {
     var numVariations = 0
-    def calc(money: Int, coins: List[Int]) {
+    def calc(money: Int, coins: List[Int]): Unit = {
       if (coins.nonEmpty)
         if (money>coins.head) {
           calc(money-coins.head, coins)
